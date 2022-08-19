@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
+import os
 
 # S: Symbol that shows starting of decoding input
 # E: Symbol that shows starting of decoding output
@@ -176,6 +177,7 @@ def showgraph(attn):
     plt.show()
 
 if __name__ == '__main__':
+    os.environ["KMP_DUPLICATE_LIB_OK"]  =  "TRUE"
     sentences = ['ich mochte ein bier P', 'S i want a beer', 'i want a beer E']
 
     # Transformer Parameters
